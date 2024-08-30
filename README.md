@@ -8,13 +8,13 @@ Non so quanto vi convenga fare dei branch se c'avete voglia di fare dei test. L'
 
 ## Note sul modello "EVM2_cyclicRate_1conv_Xavier.pth"
 - scheduler:
-  '''scheduler = torch.optim.lr_scheduler.CyclicLR(optimizer, base_lr=learning_rate, max_lr=learning_rate*100, mode='triangular2')'''
+  ```scheduler = torch.optim.lr_scheduler.CyclicLR(optimizer, base_lr=learning_rate, max_lr=learning_rate*100, mode='triangular2')```
 - optimizer:
-  '''optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)'''
+  ```optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)```
 - learning rate: 0.001
 - bacth_size = 256
 - Xavier initialization for the final linear layer
 - one convolutional layer
 - Attention block: original
 - model declaration:
-  '''model = EnhancedVirusModel2(maps=128, hidden=64).to(device)''' 
+  ```model = EnhancedVirusModel2(maps=128, hidden=64).to(device)``` 
